@@ -31,7 +31,7 @@ function MoreUsCards() {
     {
       icon: emoji.receipt,
       title: "Proof count",
-      value: `${CONFIG.instagramStats.fileCount + (callsData.data_sources?.length ?? 0)} files`,
+      value: `${CONFIG.instagramStats.fileCount + (callsData.data_sources?.length ?? 0)} files and 22 Screenshots`,
       text: "Exports, bills, screenshots. The receipts are organized.",
     },
   ];
@@ -43,7 +43,9 @@ function MoreUsCards() {
           <p className="text-sm font-black uppercase tracking-[0.14em] text-pink-500">
             extra stats {emoji.sparkles}
           </p>
-          <h2 className="mt-1 text-3xl font-black text-gray-950">More us-coded stuff</h2>
+          <h2 className="mt-1 text-3xl font-black text-gray-950">
+            More us-coded stuff
+          </h2>
         </div>
         <div className="grid gap-3 md:grid-cols-3">
           {cards.map((card) => (
@@ -55,7 +57,9 @@ function MoreUsCards() {
               <p className="mt-4 text-sm font-black uppercase tracking-[0.12em] text-pink-500">
                 {card.title}
               </p>
-              <p className="mt-1 text-3xl font-black text-gray-950">{card.value}</p>
+              <p className="mt-1 text-3xl font-black text-gray-950">
+                {card.value}
+              </p>
               <p className="mt-2 text-sm font-medium leading-relaxed text-pink-700">
                 {card.text}
               </p>

@@ -15,7 +15,11 @@ const emoji = {
 const parseDuration = (duration) => {
   if (typeof duration !== "string") return 0;
   const lower = duration.toLowerCase();
-  if (lower.includes("missed") || lower.includes("cancelled") || lower.includes("unknown")) {
+  if (
+    lower.includes("missed") ||
+    lower.includes("cancelled") ||
+    lower.includes("unknown")
+  ) {
     return 0;
   }
 
@@ -35,26 +39,29 @@ const formatDuration = (seconds) => {
   return `${secs} sec`;
 };
 
-const getAllCalls = (data) => [
-  ...(data.april_2026?.calls ?? []).map((call) => ({
-    ...call,
-    sourceBucket: "April bill",
-    durationSec: call.duration_sec ?? 0,
-    status: call.status ?? "Completed",
-  })),
-  ...(data.may_2026?.calls ?? []).map((call) => ({
-    ...call,
-    sourceBucket: "May bill",
-    durationSec: call.duration_sec ?? 0,
-    status: call.status ?? "Completed",
-  })),
-  ...(data.june_2026?.calls ?? []).map((call) => ({
-    ...call,
-    sourceBucket: "Screenshots",
-    durationSec: call.duration_sec ?? parseDuration(call.duration),
-    status: call.status ?? "Unknown",
-  })),
-];
+const getAllCalls = (data) => {
+  const months = data.months ?? {};
+  return [
+    ...(months.april_2026?.calls ?? []).map((call) => ({
+      ...call,
+      sourceBucket: "April",
+      durationSec: call.duration_sec ?? 0,
+      status: call.status ?? "Connected",
+    })),
+    ...(months.may_2026?.calls ?? []).map((call) => ({
+      ...call,
+      sourceBucket: "May",
+      durationSec: call.duration_sec ?? 0,
+      status: call.status ?? "Connected",
+    })),
+    ...(months.june_2026?.calls ?? []).map((call) => ({
+      ...call,
+      sourceBucket: "June",
+      durationSec: call.duration_sec ?? parseDuration(call.duration),
+      status: call.status ?? "Connected",
+    })),
+  ];
+};
 
 function MiniStat({ icon, label, value, note }) {
   return (
@@ -63,7 +70,9 @@ function MiniStat({ icon, label, value, note }) {
       <p className="mt-3 text-xs font-black uppercase tracking-[0.13em] text-pink-500">
         {label}
       </p>
-      <p className="mt-1 text-2xl font-black leading-tight text-gray-950">{value}</p>
+      <p className="mt-1 text-2xl font-black leading-tight text-gray-950">
+        {value}
+      </p>
       {note && <p className="mt-2 text-sm font-medium text-pink-700">{note}</p>}
     </div>
   );
@@ -72,7 +81,10 @@ function MiniStat({ icon, label, value, note }) {
 function CallAnalytics() {
   const analytics = useMemo(() => {
     const calls = getAllCalls(callsData);
-    const knownSeconds = calls.reduce((total, call) => total + call.durationSec, 0);
+    const knownSeconds = calls.reduce(
+      (total, call) => total + call.durationSec,
+      0,
+    );
     const byDate = calls.reduce((acc, call) => {
       acc[call.date] = (acc[call.date] ?? 0) + 1;
       return acc;
@@ -85,16 +97,25 @@ function CallAnalytics() {
       acc[source].seconds += call.durationSec;
       return acc;
     }, {});
-    const maxSourceCalls = Math.max(...Object.values(bySource).map((source) => source.calls), 1);
+    const maxSourceCalls = Math.max(
+      ...Object.values(bySource).map((source) => source.calls),
+      1,
+    );
     const sourceRows = Object.entries(bySource).map(([source, value]) => ({
       source,
       ...value,
       width: `${Math.round((value.calls / maxSourceCalls) * 100)}%`,
     }));
     const missed = calls.filter((call) => call.status === "Missed").length;
-    const cancelled = calls.filter((call) => call.status === "Cancelled").length;
-    const unknown = calls.filter((call) => call.status === "Unknown").length;
-    const completed = calls.filter((call) => call.status === "Completed").length;
+    const cancelled = calls.filter(
+      (call) => call.status === "Cancelled",
+    ).length;
+    const unknown = calls.filter(
+      (call) => call.durationSec === 0 && call.status !== "Missed",
+    ).length;
+    const completed = calls.filter(
+      (call) => call.status === "Connected",
+    ).length;
     const longest = calls.reduce(
       (best, call) => (call.durationSec > best.durationSec ? call : best),
       { durationSec: 0 },
@@ -110,7 +131,7 @@ function CallAnalytics() {
       cancelled,
       unknown,
       longest,
-      sourceCount: callsData.data_sources?.length ?? 0,
+      sourceCount: Object.keys(callsData.months ?? {}).length,
     };
   }, []);
 
@@ -129,7 +150,8 @@ function CallAnalytics() {
               Calls, but make it evidence
             </h2>
             <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed text-pink-600 sm:text-base">
-              Pulled from bills and screenshots. Very normal behavior, obviously.
+              Pulled from bills and screenshots. Very normal behavior,
+              obviously.
             </p>
           </div>
           <div className="rounded-full bg-pink-50 px-4 py-2 text-sm font-black text-pink-700 shadow-sm">
@@ -148,7 +170,7 @@ function CallAnalytics() {
             icon={emoji.clock}
             label="Call time"
             value={formatDuration(analytics.knownSeconds)}
-            note="Approx, because screenshots love drama"
+            note="Approx, because screenshots hehe"
           />
           <MiniStat
             icon={emoji.trophy}
@@ -166,18 +188,26 @@ function CallAnalytics() {
 
         <div className="relative mt-4 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-[1.5rem] border border-pink-100 bg-gradient-to-br from-pink-50 via-white to-rose-50 p-4">
-            <h3 className="text-base font-black text-pink-950">Source breakdown</h3>
+            <h3 className="text-base font-black text-pink-950">
+              Source breakdown
+            </h3>
             <div className="mt-4 space-y-4">
               {analytics.sourceRows.map((row) => (
                 <div key={row.source}>
                   <div className="mb-2 flex justify-between gap-3 text-sm font-bold text-pink-700">
                     <span>
-                      {row.source === "Screenshots" ? emoji.screenshot : emoji.bill} {row.source}
+                      {row.source === "Screenshots"
+                        ? emoji.screenshot
+                        : emoji.bill}{" "}
+                      {row.source}
                     </span>
                     <span>{row.calls} calls</span>
                   </div>
                   <div className="h-3 overflow-hidden rounded-full bg-white">
-                    <div className="h-full rounded-full bg-gradient-to-r from-pink-300 to-rose-500" style={{ width: row.width }} />
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-pink-300 to-rose-500"
+                      style={{ width: row.width }}
+                    />
                   </div>
                   <p className="mt-1 text-xs font-semibold text-pink-500">
                     {formatDuration(row.seconds)} known time
@@ -192,7 +222,9 @@ function CallAnalytics() {
             <div className="mt-4 grid gap-3 sm:grid-cols-4">
               <div className="rounded-2xl bg-white/10 p-4">
                 <p className="emoji text-2xl">{emoji.phone}</p>
-                <p className="mt-2 text-2xl font-black">{analytics.completed}</p>
+                <p className="mt-2 text-2xl font-black">
+                  {analytics.completed}
+                </p>
                 <p className="text-sm text-pink-100">completed</p>
               </div>
               <div className="rounded-2xl bg-white/10 p-4">
@@ -202,7 +234,9 @@ function CallAnalytics() {
               </div>
               <div className="rounded-2xl bg-white/10 p-4">
                 <p className="emoji text-2xl">{emoji.sparkles}</p>
-                <p className="mt-2 text-2xl font-black">{analytics.cancelled}</p>
+                <p className="mt-2 text-2xl font-black">
+                  {analytics.cancelled}
+                </p>
                 <p className="text-sm text-pink-100">cancelled calls</p>
               </div>
               <div className="rounded-2xl bg-white/10 p-4">
@@ -212,7 +246,8 @@ function CallAnalytics() {
               </div>
             </div>
             <p className="mt-4 rounded-2xl bg-white px-4 py-3 text-sm font-bold text-gray-950">
-              The longest call was not a call, it was a podcast episode with feelings.
+              The longest call was not a call, it was a podcast episode with
+              feelings.
             </p>
           </div>
         </div>
