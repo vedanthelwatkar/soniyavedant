@@ -1,0 +1,543 @@
+{
+  "contact": {
+    "name": "Gold Mine",
+    "number": "9987087093"
+  },
+  "months": {
+    "april_2026": {
+      "total_calls": 1,
+      "calls": [
+        {
+          "date": "27/04/26",
+          "time": "19:56",
+          "type": "Outgoing",
+          "duration": "1 hour 25 minutes",
+          "duration_sec": 5138,
+          "status": "Connected"
+        }
+      ]
+    },
+    "may_2026": {
+      "total_calls": 45,
+      "calls": [
+        {
+          "date": "01/05/26",
+          "time": "21:35",
+          "type": "Outgoing",
+          "duration": "39 minutes",
+          "duration_sec": 2348,
+          "status": "Connected"
+        },
+        {
+          "date": "06/05/26",
+          "time": "23:24",
+          "type": "Incoming",
+          "duration": "5 minutes",
+          "duration_sec": 300,
+          "status": "Connected"
+        },
+        {
+          "date": "07/05/26",
+          "time": "23:16",
+          "type": "Outgoing",
+          "duration": "8 seconds",
+          "duration_sec": 8,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "07:05",
+          "type": "Outgoing",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "07:19",
+          "type": "Outgoing",
+          "duration": "2 seconds",
+          "duration_sec": 2,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "07:21",
+          "type": "Incoming",
+          "duration": "16 seconds",
+          "duration_sec": 16,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "07:44",
+          "type": "Incoming",
+          "duration": "23 seconds",
+          "duration_sec": 23,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "07:50",
+          "type": "Outgoing",
+          "duration": "14 seconds",
+          "duration_sec": 14,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "07:55",
+          "type": "Outgoing",
+          "duration": "26 seconds",
+          "duration_sec": 26,
+          "status": "Connected"
+        },
+        {
+          "date": "08/05/26",
+          "time": "10:56",
+          "type": "Incoming",
+          "duration": "Missed",
+          "duration_sec": 0,
+          "status": "Missed"
+        },
+        {
+          "date": "11/05/26",
+          "time": "19:54",
+          "type": "Incoming",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "11/05/26",
+          "time": "20:17",
+          "type": "Incoming",
+          "duration": "Missed",
+          "duration_sec": 0,
+          "status": "Missed"
+        },
+        {
+          "date": "11/05/26",
+          "time": "20:17",
+          "type": "Outgoing",
+          "duration": "41 seconds",
+          "duration_sec": 41,
+          "status": "Connected"
+        },
+        {
+          "date": "11/05/26",
+          "time": "20:18",
+          "type": "Outgoing",
+          "duration": "22 seconds",
+          "duration_sec": 22,
+          "status": "Connected"
+        },
+        {
+          "date": "11/05/26",
+          "time": "20:27",
+          "type": "Outgoing",
+          "duration": "20 seconds",
+          "duration_sec": 20,
+          "status": "Connected"
+        },
+        {
+          "date": "11/05/26",
+          "time": "20:54",
+          "type": "Incoming",
+          "duration": "6 seconds",
+          "duration_sec": 6,
+          "status": "Connected"
+        },
+        {
+          "date": "11/05/26",
+          "time": "22:05",
+          "type": "Outgoing",
+          "duration": "Cancelled",
+          "duration_sec": 0,
+          "status": "Cancelled"
+        },
+        {
+          "date": "12/05/26",
+          "time": "14:12",
+          "type": "Incoming",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "13:33",
+          "type": "Outgoing",
+          "duration": "12 seconds",
+          "duration_sec": 12,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "13:33",
+          "type": "Incoming",
+          "duration": "15 seconds",
+          "duration_sec": 15,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "14:34",
+          "type": "Outgoing",
+          "duration": "24 seconds",
+          "duration_sec": 24,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "14:54",
+          "type": "Incoming",
+          "duration": "12 seconds",
+          "duration_sec": 12,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "14:57",
+          "type": "Outgoing",
+          "duration": "Cancelled",
+          "duration_sec": 0,
+          "status": "Cancelled"
+        },
+        {
+          "date": "13/05/26",
+          "time": "14:58",
+          "type": "Incoming",
+          "duration": "26 seconds",
+          "duration_sec": 26,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "15:04",
+          "type": "Incoming",
+          "duration": "19 seconds",
+          "duration_sec": 19,
+          "status": "Connected"
+        },
+        {
+          "date": "13/05/26",
+          "time": "15:08",
+          "type": "Outgoing",
+          "duration": "33 seconds",
+          "duration_sec": 33,
+          "status": "Connected"
+        },
+        {
+          "date": "15/05/26",
+          "time": "13:37",
+          "type": "Incoming",
+          "duration": "51 seconds",
+          "duration_sec": 51,
+          "status": "Connected"
+        },
+        {
+          "date": "19/05/26",
+          "time": "20:47",
+          "type": "Incoming",
+          "duration": "Missed",
+          "duration_sec": 0,
+          "status": "Missed"
+        },
+        {
+          "date": "19/05/26",
+          "time": "20:48",
+          "type": "Incoming",
+          "duration": "Missed",
+          "duration_sec": 0,
+          "status": "Missed"
+        },
+        {
+          "date": "19/05/26",
+          "time": "20:56",
+          "type": "Outgoing",
+          "duration": "11 seconds",
+          "duration_sec": 11,
+          "status": "Connected"
+        },
+        {
+          "date": "19/05/26",
+          "time": "20:56",
+          "type": "Outgoing",
+          "duration": "Cancelled",
+          "duration_sec": 0,
+          "status": "Cancelled"
+        },
+        {
+          "date": "19/05/26",
+          "time": "21:56",
+          "type": "Outgoing",
+          "duration": "8 seconds",
+          "duration_sec": 8,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "15:22",
+          "type": "Outgoing",
+          "duration": "3 minutes",
+          "duration_sec": 180,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "15:27",
+          "type": "Outgoing",
+          "duration": "8 seconds",
+          "duration_sec": 8,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "15:51",
+          "type": "Incoming",
+          "duration": "10 seconds",
+          "duration_sec": 10,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "15:53",
+          "type": "Outgoing",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "15:57",
+          "type": "Incoming",
+          "duration": "34 minutes",
+          "duration_sec": 2040,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "22:10",
+          "type": "Incoming",
+          "duration": "19 seconds",
+          "duration_sec": 19,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "22:11",
+          "type": "Incoming",
+          "duration": "26 seconds",
+          "duration_sec": 26,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "22:15",
+          "type": "Outgoing",
+          "duration": "12 seconds",
+          "duration_sec": 12,
+          "status": "Connected"
+        },
+        {
+          "date": "20/05/26",
+          "time": "22:17",
+          "type": "Incoming",
+          "duration": "2 minutes",
+          "duration_sec": 120,
+          "status": "Connected"
+        },
+        {
+          "date": "22/05/26",
+          "time": "17:26",
+          "type": "Incoming",
+          "duration": "Missed",
+          "duration_sec": 0,
+          "status": "Missed"
+        },
+        {
+          "date": "22/05/26",
+          "time": "17:33",
+          "type": "Outgoing",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "27/05/26",
+          "time": "17:03",
+          "type": "Incoming",
+          "duration": "2 minutes",
+          "duration_sec": 120,
+          "status": "Connected"
+        },
+        {
+          "date": "28/05/26",
+          "time": "13:29",
+          "type": "Outgoing",
+          "duration": "Cancelled",
+          "duration_sec": 0,
+          "status": "Cancelled"
+        }
+      ]
+    },
+    "june_2026": {
+      "total_calls": 19,
+      "calls": [
+        {
+          "date": "04/06/26",
+          "time": "17:11",
+          "type": "Incoming",
+          "duration": "Missed",
+          "duration_sec": 0,
+          "status": "Missed"
+        },
+        {
+          "date": "04/06/26",
+          "time": "17:15",
+          "type": "Outgoing",
+          "duration": "Cancelled",
+          "duration_sec": 0,
+          "status": "Cancelled"
+        },
+        {
+          "date": "04/06/26",
+          "time": "17:19",
+          "type": "Outgoing",
+          "duration": "3 minutes",
+          "duration_sec": 180,
+          "status": "Connected"
+        },
+        {
+          "date": "06/06/26",
+          "time": "13:09",
+          "type": "Outgoing",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "06/06/26",
+          "time": "17:55",
+          "type": "Outgoing",
+          "duration": "6 seconds",
+          "duration_sec": 6,
+          "status": "Connected"
+        },
+        {
+          "date": "06/06/26",
+          "time": "18:01",
+          "type": "Outgoing",
+          "duration": "17 seconds",
+          "duration_sec": 17,
+          "status": "Connected"
+        },
+        {
+          "date": "07/06/26",
+          "time": "18:24",
+          "type": "Incoming",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "08/06/26",
+          "time": "15:53",
+          "type": "Outgoing",
+          "duration": "36 minutes",
+          "duration_sec": 2160,
+          "status": "Connected"
+        },
+        {
+          "date": "08/06/26",
+          "time": "16:26",
+          "type": "Outgoing",
+          "duration": "8 seconds",
+          "duration_sec": 8,
+          "status": "Connected"
+        },
+        {
+          "date": "08/06/26",
+          "time": "16:27",
+          "type": "Incoming",
+          "duration": "6 minutes",
+          "duration_sec": 360,
+          "status": "Connected"
+        },
+        {
+          "date": "08/06/26",
+          "time": "16:35",
+          "type": "Outgoing",
+          "duration": "6 minutes",
+          "duration_sec": 360,
+          "status": "Connected"
+        },
+        {
+          "date": "08/06/26",
+          "time": "17:58",
+          "type": "Incoming",
+          "duration": "3 minutes",
+          "duration_sec": 180,
+          "status": "Connected"
+        },
+        {
+          "date": "09/06/26",
+          "time": "11:19",
+          "type": "Outgoing",
+          "duration": "47 seconds",
+          "duration_sec": 47,
+          "status": "Connected"
+        },
+        {
+          "date": "09/06/26",
+          "time": "11:22",
+          "type": "Outgoing",
+          "duration": "Cancelled",
+          "duration_sec": 0,
+          "status": "Cancelled"
+        },
+        {
+          "date": "09/06/26",
+          "time": "13:45",
+          "type": "Outgoing",
+          "duration": "4 seconds",
+          "duration_sec": 4,
+          "status": "Connected"
+        },
+        {
+          "date": "09/06/26",
+          "time": "13:52",
+          "type": "Outgoing",
+          "duration": "6 seconds",
+          "duration_sec": 6,
+          "status": "Connected"
+        },
+        {
+          "date": "09/06/26",
+          "time": "13:56",
+          "type": "Incoming",
+          "duration": "1 minute",
+          "duration_sec": 60,
+          "status": "Connected"
+        },
+        {
+          "date": "09/06/26",
+          "time": "14:00",
+          "type": "Incoming",
+          "duration": "39 seconds",
+          "duration_sec": 39,
+          "status": "Connected"
+        },
+        {
+          "date": "09/06/26",
+          "time": "14:10",
+          "type": "Outgoing",
+          "duration": "2 minutes",
+          "duration_sec": 120,
+          "status": "Connected"
+        }
+      ]
+    }
+  }
+}

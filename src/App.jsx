@@ -5,6 +5,8 @@ import Timeline from "./components/Timeline.jsx";
 import ServiceRoadCard from "./components/ServiceRoadCard.jsx";
 import Footer from "./components/Footer.jsx";
 import InstagramAnalysis from "./components/InstagramAnalysis.jsx";
+import CallAnalytics from "./components/CallAnalytics.jsx";
+import MoreUsCards from "./components/MoreUsCards.jsx";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <section className="analysisSection">
           <InstagramAnalysis />
         </section>
+        <CallAnalytics />
+        <MoreUsCards />
       </main>
       <Footer />
     </div>
