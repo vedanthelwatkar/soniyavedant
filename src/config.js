@@ -1,7 +1,7 @@
 export const EMOJI = {
   cry: "\u{1F62D}",
   laugh: "\u{1F923}",
-  pleading: "\u{1F979}",
+  bubble: "\u{1FAA9}",
   pray: "\u{1F64F}",
   heartEyes: "\u{1F60D}",
   heart: "\u2764\uFE0F",
@@ -40,13 +40,16 @@ export const CONFIG = {
       Soniya: 114,
     },
     topEmojis: [
-      { emoji: EMOJI.cry, count: 4960 },
-      { emoji: EMOJI.laugh, count: 4398 },
-      { emoji: EMOJI.pleading, count: 2433 },
-      { emoji: EMOJI.pray, count: 2219 },
-      { emoji: EMOJI.heartEyes, count: 1432 },
-      { emoji: EMOJI.heart, count: 1036 },
+      { emoji: "😭", count: 4960 },
+      { emoji: "🤣", count: 4398 },
+      { emoji: "🫩", count: 2433 },
+      { emoji: "🙏", count: 2219 },
+      { emoji: "😍", count: 1432 },
+      { emoji: "❤️", count: 1036 },
     ],
+    favoriteSong: "Mirrors by Justin Timberlake",
+    favoriteColor: "Purple",
+    favoritePerson: "Vedant 💜",
     // INSTAGRAM_STATS START
     // INSTAGRAM_STATS END
   },
@@ -75,7 +78,8 @@ export const CONFIG = {
     {
       date: "Photobooth Day",
       title: "Photobooth Evidence",
-      description: "Cute pics were taken. Allegations of being obsessed remain true",
+      description:
+        "Cute pics were taken. Allegations of being obsessed remain true",
       imageName: "sv4.JPG",
       icon: EMOJI.camera,
     },

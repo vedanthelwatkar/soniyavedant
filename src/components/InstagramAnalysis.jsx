@@ -133,7 +133,7 @@ function InstagramAnalysis() {
 
           <StatCard
             id="love"
-            title="Love messages"
+            title="Love you count"
             value={`${stats.loved.toLocaleString()} times`}
             note={Object.entries(stats.loveCounts)
               .map(([name, count]) => `${name}: ${count}`)
@@ -142,7 +142,7 @@ function InstagramAnalysis() {
             activeCard={activeCard}
             onToggle={toggleCard}
           >
-            <p>Romantic words detected. The algorithm said stop blushing.</p>
+            <p>I said it more. I won. Game over. You got destroyed. 😤</p>
           </StatCard>
 
           <StatCard

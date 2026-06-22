@@ -143,7 +143,7 @@ function CallAnalytics() {
         <div className="relative mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.14em] text-pink-500">
-              call log audit {emoji.phone}
+              call log audit {emoji.calendar}
             </p>
             <h2 className="mt-1 text-3xl font-black leading-tight text-gray-950 sm:text-4xl">
               Calls, but make it evidence

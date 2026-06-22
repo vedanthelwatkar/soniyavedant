@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 import re
 import sys
+import argparse
 
 CHAT_DIR = Path("src/chats/sona-ig")
 OUTPUT_FILE = Path("instagram_stats_output.json")
@@ -127,7 +128,54 @@ def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
 
+    parser = argparse.ArgumentParser(
+        description="Generate and analyze Instagram DM statistics"
+    )
+    parser.add_argument(
+        "--verify",
+        action="store_true",
+        help="Verify emoji counts from the raw message data (shows top 20 emojis)",
+    )
+    parser.add_argument(
+        "--check-emoji",
+        type=str,
+        help="Check count of a specific emoji (e.g., '🥹' or '🫩')",
+    )
+    args = parser.parse_args()
+
     messages = load_chats()
+
+    if args.verify:
+        # Verification mode: show all emoji counts
+        emoji_counts = Counter()
+        for msg in messages:
+            text = fix_text(msg.get("content", ""))
+            if not text:
+                continue
+            emojis = count_emojis(text)
+            emoji_counts.update(emojis)
+
+        print("Verification Mode - Top 20 Emojis:")
+        print("-" * 40)
+        for emoji, count in emoji_counts.most_common(20):
+            print(f"{emoji}: {count}")
+        return
+
+    if args.check_emoji:
+        # Check specific emoji count
+        emoji_counts = Counter()
+        for msg in messages:
+            text = fix_text(msg.get("content", ""))
+            if not text:
+                continue
+            emojis = count_emojis(text)
+            emoji_counts.update(emojis)
+
+        count = emoji_counts.get(args.check_emoji, 0)
+        print(f"Count of {args.check_emoji}: {count}")
+        return
+
+    # Normal generation mode
     summary = summarize(messages)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
 

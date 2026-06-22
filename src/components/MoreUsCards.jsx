@@ -34,6 +34,24 @@ function MoreUsCards() {
       value: `${CONFIG.instagramStats.fileCount + (callsData.data_sources?.length ?? 0)} files and 22 Screenshots`,
       text: "Exports, bills, screenshots. The receipts are organized.",
     },
+    {
+      icon: "🎵",
+      title: "Favorite song",
+      value: CONFIG.instagramStats.favoriteSong,
+      text: "Mirrors, because two reflections are better than one.",
+    },
+    {
+      icon: "🎨",
+      title: "Favorite color",
+      value: CONFIG.instagramStats.favoriteColor,
+      text: "Coincidentally also the color of infinite kindness.",
+    },
+    {
+      icon: "👑",
+      title: "Favorite person",
+      value: CONFIG.instagramStats.favoritePerson,
+      text: "Plot twist: it's me gng. Who else would it be? 🙄",
+    },
   ];
 
   return (
