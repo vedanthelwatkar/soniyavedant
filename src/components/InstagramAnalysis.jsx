@@ -23,7 +23,16 @@ const isEmoji = (value) => {
 
 const displayEmoji = (value) => (isEmoji(value) ? value : emoji.empty);
 
-function StatCard({ id, title, value, note, icon, activeCard, onToggle, children }) {
+function StatCard({
+  id,
+  title,
+  value,
+  note,
+  icon,
+  activeCard,
+  onToggle,
+  children,
+}) {
   const active = activeCard === id;
 
   return (
@@ -41,7 +50,9 @@ function StatCard({ id, title, value, note, icon, activeCard, onToggle, children
         {icon}
       </span>
       <div className="relative pr-10">
-        <h3 className="text-sm font-black text-pink-950 sm:text-base">{title}</h3>
+        <h3 className="text-sm font-black text-pink-950 sm:text-base">
+          {title}
+        </h3>
         <p className="mt-2 break-words text-3xl font-extrabold leading-none tracking-tight text-gray-950 sm:text-4xl">
           {value}
         </p>
@@ -49,7 +60,11 @@ function StatCard({ id, title, value, note, icon, activeCard, onToggle, children
           {note}
         </small>
       </div>
-      {active && <div className="mt-4 text-sm leading-relaxed text-pink-700">{children}</div>}
+      {active && (
+        <div className="mt-4 text-sm leading-relaxed text-pink-700">
+          {children}
+        </div>
+      )}
     </button>
   );
 }
@@ -73,9 +88,8 @@ function InstagramAnalysis() {
   };
 
   return (
-    <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-4 shadow-xl shadow-pink-100/70 sm:p-7 md:p-8">
-      <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-pink-100 blur-2xl" />
-      <div className="pointer-events-none absolute -bottom-12 -left-10 h-36 w-36 rounded-full bg-rose-100 blur-2xl" />
+    <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-br from-pink-50 via-white to-rose-50 p-4 shadow-xl shadow-pink-100/70 sm:p-7 md:p-8">
+      <div className="pointer-events-none absolute inset-0 rounded-[2rem]" />
 
       <div className="relative mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -111,7 +125,10 @@ function InstagramAnalysis() {
             activeCard={activeCard}
             onToggle={toggleCard}
           >
-            <p>Every message from the exports. Normal people would call this a lot.</p>
+            <p>
+              Every message from the exports. Normal people would call this a
+              lot.
+            </p>
           </StatCard>
 
           <StatCard
@@ -173,7 +190,9 @@ function InstagramAnalysis() {
             activeCard={activeCard}
             onToggle={toggleCard}
           >
-            <p>A daily average, because apparently feelings needed analytics.</p>
+            <p>
+              A daily average, because apparently feelings needed analytics.
+            </p>
           </StatCard>
 
           <div className="rounded-[1.6rem] border border-pink-100 bg-white p-4 shadow-sm sm:p-5 md:col-span-2">
@@ -182,7 +201,10 @@ function InstagramAnalysis() {
             </h3>
             <div className="space-y-4">
               {chartRows.map((row) => (
-                <div key={row.name} className="grid gap-2 sm:grid-cols-[120px_1fr_auto] sm:items-center">
+                <div
+                  key={row.name}
+                  className="grid gap-2 sm:grid-cols-[120px_1fr_auto] sm:items-center"
+                >
                   <span className="text-sm font-bold text-pink-800 sm:text-base">
                     {row.name}
                   </span>
@@ -213,7 +235,9 @@ function InstagramAnalysis() {
           </StatCard>
 
           <div className="min-w-0 rounded-[1.6rem] border border-pink-100 bg-gradient-to-br from-pink-50 via-white to-rose-50 p-4 shadow-sm sm:p-5">
-            <h3 className="text-sm font-black text-pink-950 sm:text-base">Top emojis</h3>
+            <h3 className="text-sm font-black text-pink-950 sm:text-base">
+              Top emojis
+            </h3>
             <div className="mt-4 grid grid-cols-3 gap-2 min-[420px]:grid-cols-4 sm:grid-cols-6">
               {stats.topEmojis && stats.topEmojis.length ? (
                 stats.topEmojis.map((item) => (

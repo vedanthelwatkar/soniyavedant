@@ -137,9 +137,8 @@ function CallAnalytics() {
 
   return (
     <section className="analysisSection">
-      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-4 shadow-xl shadow-pink-100/70 sm:p-7 md:p-8">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-pink-100 blur-2xl" />
-        <div className="pointer-events-none absolute -bottom-14 -left-10 h-36 w-36 rounded-full bg-rose-100 blur-2xl" />
+      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-br from-pink-50 via-white to-rose-50 p-4 shadow-xl shadow-pink-100/70 sm:p-7 md:p-8">
+        <div className="pointer-events-none absolute inset-0 rounded-[2rem]" />
 
         <div className="relative mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>

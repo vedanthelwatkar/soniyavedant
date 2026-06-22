@@ -29,9 +29,8 @@ const loreBits = [
 function ServiceRoadCard() {
   return (
     <section className="mx-auto mb-8 max-w-6xl px-4 sm:px-6">
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white p-5 shadow-xl shadow-pink-100/70 sm:p-7">
-        <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-pink-100 blur-2xl" />
-        <div className="absolute -bottom-14 -left-10 h-36 w-36 rounded-full bg-rose-100 blur-2xl" />
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-br from-pink-50 via-white to-rose-50 p-5 shadow-xl shadow-pink-100/70 sm:p-7">
+        <div className="absolute inset-0 rounded-[2rem]" />
 
         <div className="relative grid gap-5 md:grid-cols-[1.2fr_0.8fr] md:items-center">
           <div>
@@ -72,7 +71,9 @@ function ServiceRoadCard() {
               <p className="mt-2 text-xs font-black uppercase tracking-[0.12em] text-pink-500">
                 {item.label}
               </p>
-              <p className="mt-1 text-sm font-bold text-gray-900">{item.value}</p>
+              <p className="mt-1 text-sm font-bold text-gray-900">
+                {item.value}
+              </p>
             </div>
           ))}
         </div>
