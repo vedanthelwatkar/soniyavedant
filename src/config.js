@@ -11,6 +11,7 @@ export const EMOJI = {
   camera: "\u{1F4F8}",
 };
 
+import igChats from "../instagram_stats_output.json";
 export const CONFIG = {
   myName: "Vedant",
   herName: "Soniya",
@@ -21,38 +22,7 @@ export const CONFIG = {
   myBirthday: new Date("2003-01-22"),
   herBirthday: new Date("2005-01-11"),
   heroQuote: "Soft launch? Bro this is the whole production build.",
-  instagramStats: {
-    totalMessages: 85277,
-    fileCount: 9,
-    averagePerDay: "1272.8",
-    loved: 258,
-    heartTotal: 2069,
-    missed: 113,
-    mostActiveMonth: "May 2026",
-    longestStreak: 67,
-    totalDays: 67,
-    perPerson: {
-      Soniya: 34305,
-      Vedant: 50972,
-    },
-    loveCounts: {
-      Vedant: 144,
-      Soniya: 114,
-    },
-    topEmojis: [
-      { emoji: "😭", count: 4960 },
-      { emoji: "🤣", count: 4398 },
-      { emoji: "🫩", count: 2433 },
-      { emoji: "🙏", count: 2219 },
-      { emoji: "😍", count: 1432 },
-      { emoji: "❤️", count: 1036 },
-    ],
-    favoriteSong: "Mirrors by Justin Timberlake",
-    favoriteColor: "Purple",
-    favoritePerson: "Vedant 💜",
-    // INSTAGRAM_STATS START
-    // INSTAGRAM_STATS END
-  },
+  instagramStats: igChats,
   memories: [
     {
       date: "April 15, 2026",
